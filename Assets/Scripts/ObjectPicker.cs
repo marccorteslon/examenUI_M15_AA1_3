@@ -142,22 +142,23 @@ public class ObjectPicker : MonoBehaviour
     }
     void HandlePickingUI()
     {
-        if (pickableObject != null)
-        {
-
-        }
         if (state == PICKSTATE.AVAILABLE)
         {
             Debug.Log("Available");
+            pickingIcon.alpha = 1f;
         } else if (state == PICKSTATE.FAR)
         {
             Debug.Log("Far");
-        } /* else if (state == PICKSTATE.NOTVISIBLE)
+            pickingIcon.alpha = 0.25f;
+        } else if (state == PICKSTATE.NOTVISIBLE)
         {
-            Debug.Log("Not Visible"); 
-        } */else if (state == PICKSTATE.BLOCKED)
+            //Debug.Log("Not Visible");
+            pickingIcon.alpha = 0f;
+        }
+        else if (state == PICKSTATE.BLOCKED)
         {
             Debug.Log("Blocked");
+            pickingIcon.alpha = 0.5f;
         }
     }
 
