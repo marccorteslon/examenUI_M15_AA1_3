@@ -1,25 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
+public class ButtonPanel : MonoBehaviour
 {
-    public RectTransform rect;
-
-    public GameObject Panel;
+   public GameObject Panel;
     public GameObject Button;
     bool isActive = false;
 
-    private void Update()
-    {
-        if (Input.GetButtonDown("I"))
-        {
-            Console.WriteLine("Abriendo");
-            InventoryToggle();
-        }
-    }
-    public void InventoryToggle()
+    public void PanelToggle()
     {
         if (Panel != null)
         {
@@ -35,8 +24,6 @@ public class InventoryManager : MonoBehaviour
                 Button.SetActive(true);
                 isActive = false;
             }
-        }
+        }    
     }
-
-    
 }
