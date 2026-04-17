@@ -142,7 +142,23 @@ public class ObjectPicker : MonoBehaviour
     }
     void HandlePickingUI()
     {
+        if (pickableObject != null)
+        {
 
+        }
+        if (state == PICKSTATE.AVAILABLE)
+        {
+            Debug.Log("Available");
+        } else if (state == PICKSTATE.FAR)
+        {
+            Debug.Log("Far");
+        } /* else if (state == PICKSTATE.NOTVISIBLE)
+        {
+            Debug.Log("Not Visible"); 
+        } */else if (state == PICKSTATE.BLOCKED)
+        {
+            Debug.Log("Blocked");
+        }
     }
 
     void StartPickup()

@@ -13,9 +13,9 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("I"))
+        if (Input.GetButtonDown("Inventory"))
         {
-            Console.WriteLine("Abriendo");
+            Debug.Log("Abriendo");
             InventoryToggle();
         }
     }

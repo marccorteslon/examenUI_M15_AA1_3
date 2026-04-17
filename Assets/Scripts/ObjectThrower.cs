@@ -27,6 +27,9 @@ public class ObjectThrower : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
+            forceIndicator.enabled = true;
+            Debug.Log("Mostrar imagen fuerza");
+
             force += forceSpeed * Time.deltaTime;
             if (force < forceMin)
             {
@@ -47,6 +50,8 @@ public class ObjectThrower : MonoBehaviour
         }
         else
         {
+            forceIndicator.enabled = false;
+
             selected += (int)Input.mouseScrollDelta.y;
             if(selected >= objects.Length)
             {
